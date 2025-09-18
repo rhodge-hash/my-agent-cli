@@ -1,11 +1,10 @@
 <a id="readme-top"></a>
 
-[][contributors-url]
-[][forks-url]
-[][stars-url]
-[][issues-url]
-[][license-url]
-[][linkedin-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![project_license][license-shield]][license-url]
 
 <br />
 <div align="center">
