@@ -17,7 +17,7 @@ A Text-based User Interface (TUI) application for interacting with local Large L
 _Please add your screenshots here to showcase the application._
 
 ![Screenshot 1](path/to/your/screenshot1.png)
-![Screenshot 2](path/to/your/screenshot2.png)
+![Agent App Image](https://github.com/rhodge-hash/my-agent-cli/blob/main/AgentApp.png?raw=true)
 
 ## Setup
 
