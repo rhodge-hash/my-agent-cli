@@ -1,11 +1,5 @@
 <a id="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![project_license][license-shield]][license-url]
-
 <br />
 <div align="center">
 <a href="https://github.com/rhodge-hash/my-agent-cli">
@@ -57,64 +51,52 @@ About The Project
 
 My-Agent CLI is a Text-based User Interface (TUI) for interacting with local Large Language Models (LLMs). The project focuses on giving these LLM agents tool-use capabilities to automate software engineering tasks. This tool serves as a foundation for building autonomous agents that can perform actions like executing shell commands and managing Git operations.
 
-Key Features
+Key Features:
 
-    Interactive TUI: A responsive terminal experience built with Textual.
++    Interactive TUI: A responsive terminal experience built with Textual.
 
-    Local LLM Integration: Connects to local LLM servers like LM Studio and Ollama.
+ +   Local LLM Integration: Connects to local LLM servers like LM Studio and Ollama.
 
-    Tool Use: Agents can suggest and execute shell commands with user confirmation.
+  +   Tool Use: Agents can suggest and execute shell commands with user confirmation.
+    - Agent Configuration: Define custom agents and their models using a simple agents.yaml file.
+    - Conversation History: Maintains context for the agent's actions.
+    - Extensible: Easily add new agents, tools, and UI components.
 
-    Agent Configuration: Define custom agents and their models using a simple agents.yaml file.
-
-    Conversation History: Maintains context for the agent's actions.
-
-    Extensible: Easily add new agents, tools, and UI components.
-
-Built With
-
-    Python
-
-    Textual
-
-    LM Studio
-
-    Ollama
-
+Built With:
+    - Python
+    - Textual
+    - LM Studio
+    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Getting Started
+### Getting Started
 
 Follow these steps to get a local copy up and running.
 
-Prerequisites
+#### Prerequisites
 
     Python 3.8+
+    Local LLM Server: Download and run a server like LM Studio/Ollama. Load a compatible chat model and ensure the local server is running.
 
-    Local LLM Server: Download and run a server like LM Studio. Load a compatible chat model and ensure the local server is running.
-
-Installation
+### Installation
 
     Clone the repository:
-    Bash
-
+```bash
 git clone https://github.com/rhodge-hash/my-agent-cli.git
 cd my-agent-cli
-
+```
 Create and activate a virtual environment:
-Bash
-
+```
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
+```
 Install dependencies:
-Bash
-
+```
     pip install -r requirements.txt
-
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Configuration
+## Configuration
 
 agents.yaml
 
@@ -132,24 +114,23 @@ Note: The model name must exactly match the identifier loaded in your LLM server
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Usage
+## Usage
 
+:::info
     Ensure your LM Studio or Ollama server is running with a model loaded.
+:::
 
-    Run the TUI application:
-    Bash
-
+ Run the application:
+```
     python agent_tui.py
-
-    Interact with the agent: Type your prompts in the input box and press Enter.
-
-    Tool Confirmation: The application executes suggested shell commands and feeds the output back to the agent.
-
-    Quit: Press Ctrl+P to exit the application.
+```
+ Interact with the agent: Type your prompts in the input box and press Enter.
+ Tool Confirmation: The application executes suggested shell commands and feeds the output back to the agent.
+ Quit: Press Ctrl+P to exit the application.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Roadmap
+### Roadmap
 
     [ ] Agent Selection UI
 
@@ -181,7 +162,7 @@ Adding New Tools
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Contributing
+### Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
@@ -197,7 +178,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 
     Open a Pull Request
 
-Top contributors:
+#### Top contributors:
 
 <a href="https://github.com/rhodge-hash/my-agent-cli/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=rhodge-hash/my-agent-cli" alt="contrib.rocks image" />
@@ -205,7 +186,7 @@ Top contributors:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-License
+### License
 
 This project is licensed under the Unlicense. See the LICENSE file for more details.
 
