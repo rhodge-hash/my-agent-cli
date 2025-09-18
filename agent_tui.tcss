@@ -1,0 +1,49 @@
+
+/* A dark, modern theme for the agent TUI */
+
+Screen {
+    background: #1e1e1e;
+    color: #dcdcdc;
+}
+
+#chat_log {
+    border: round #4a4a4a;
+    margin: 1;
+    overflow-y: scroll;
+}
+
+#prompt_input {
+    border: round #4a4a4a;
+    margin: 0 1 1 1;
+    height: 3;
+}
+
+/* Style for different message types */
+.user_message {
+    background: #2a2d31;
+    color: #569cd6;
+    padding: 1;
+    margin: 1 0;
+}
+
+.agent_message {
+    background: #252526;
+    color: #c8c8c8;
+    padding: 1;
+    margin: 1 0;
+}
+
+.tool_message {
+    background: #333333;
+    color: #d7ba7d;
+    padding: 1;
+    margin: 1 0;
+    border: dashed #666666;
+}
+
+.status_message {
+    background: #2a2d31;
+    color: #b5cea8;
+    padding: 1;
+    margin: 1 0;
+}

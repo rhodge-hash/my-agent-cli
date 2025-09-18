@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+*.log
+
+# Virtual environment
+.venv/
+
+# OS-specific
+.DS_Store
+
+# LM Studio logs (if they end up in project dir)
+lmstudio-server-logs/
