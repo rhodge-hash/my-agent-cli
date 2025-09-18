@@ -1,4 +1,4 @@
-# Agent TUI
+# My-Agent CLI
 
 A Text-based User Interface (TUI) application for interacting with local Large Language Models (LLMs) as agents, with a focus on tool-use capabilities for automating software engineering tasks. This project serves as a foundation for building autonomous agents that can perform actions like executing shell commands, creating code, and managing Git operations.
 
@@ -28,8 +28,8 @@ A Text-based User Interface (TUI) application for interacting with local Large L
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/agent-tui.git
-    cd agent-tui
+    git clone https://github.com/rhodge-hash/my-agent-cli.git
+    cd my-agent-cli
     ```
 
 2.  **Create and activate a virtual environment:**
@@ -82,7 +82,7 @@ agents:
     ```
 3.  **Interact with the agent:** Type your prompts in the input box at the bottom of the terminal and press Enter.
 4.  **Tool Confirmation:** If the agent suggests a shell command, the application will execute it and feed the output back to the agent. (Currently, this is auto-confirmed for simplicity in the TUI, but can be extended with a user confirmation dialog).
-5.  **Quit:** Press `Ctrl+C` to exit the application.
+5.  **Quit:** Press `Ctrl+P` to exit the application.
 
 ## Extending the Agent
 
@@ -98,15 +98,14 @@ To add new capabilities (e.g., `write_file`, `read_file`, `git_commit`), you wou
 2.  **Update the `parse_tool_call` function** to recognize the new tool's JSON format.
 3.  **Instruct the agent** in its `system_prompt` on how and when to use the new tool.
 
-## Future Enhancements
+## Potential Future Enhancements
 
 *   **Agent Selection UI:** A sidebar or modal to easily switch between configured agents.
 *   **Dynamic Configuration:** In-app editing of agent prompts and settings.
 *   **More Tools:** Implement `write_file`, `read_file`, `git_add`, `git_commit`, etc.
 *   **User Confirmation Dialogs:** For tool execution.
-*   **Ollama Integration:** Make the LLM server configurable within the TUI.
 *   **Error Handling:** More robust error messages and recovery.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the Unlicense - see the LICENSE file for details.
