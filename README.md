@@ -5,7 +5,7 @@
   
   <h1>🤖 My-Agent CLI</h1>
   <p>
-    <b>A powerful, extensible TUI for interacting with local Large Language Models (LLMs) and automating software tasks.</b>
+    <b>A powerful, extensible TUI for interacting with <br> local Large Language Models (LLMs) and automating software tasks.</b>
   </p>
   <p>
     <a href="https://github.com/rhodge-hash/my-agent-cli/stargazers">
