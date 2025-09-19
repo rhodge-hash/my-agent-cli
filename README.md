@@ -17,9 +17,7 @@
     <a href="https://github.com/rhodge-hash/my-agent-cli/issues">
       <img src="https://img.shields.io/github/issues/rhodge-hash/my-agent-cli?style=flat-square" alt="Issues">
     </a>
-    <a href="https://github.com/rhodge-hash/my-agent-cli/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/rhodge-hash/my-agent-cli?style=flat-square" alt="License">
-    </a>
+![GitHub license](https://img.shields.io/github/license/rhodge-hash/my-agent-cli)
     <a href="https://github.com/rhodge-hash/my-agent-cli/graphs/contributors">
       <img src="https://img.shields.io/github/contributors/rhodge-hash/my-agent-cli?style=flat-square" alt="Contributors">
     </a>
