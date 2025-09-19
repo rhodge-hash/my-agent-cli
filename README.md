@@ -5,7 +5,7 @@
   
   <h1>🤖 My-Agent CLI</h1>
   <p>
-    <b>A powerful, extensible TUI for interacting with <br> local Large Language Models (LLMs) and automating software tasks.</b>
+    <b>A powerful, extensible TUI for interacting with local Large Language Models (LLMs) and automating software tasks.</b>
   </p>
   <p>
     <a href="https://github.com/rhodge-hash/my-agent-cli/stargazers">
@@ -17,8 +17,8 @@
     <a href="https://github.com/rhodge-hash/my-agent-cli/issues">
       <img src="https://img.shields.io/github/issues/rhodge-hash/my-agent-cli?style=flat-square" alt="Issues">
     </a>
-        <a href="https://github.com/rhodge-hash/my-agent-cli/license">
-      <img src="https://img.shields.io/github/license/rhodge-hash/my-agent-cli?style=flat-square" alt="License">
+    <a href="https://github.com/rhodge-hash/my-agent-cli/blob/main/LICENSE">
+      <img src="https://img.shields.io/badge/license-Unlicense-blue?style=flat-square" alt="License">
     </a>
     <a href="https://github.com/rhodge-hash/my-agent-cli/graphs/contributors">
       <img src="https://img.shields.io/github/contributors/rhodge-hash/my-agent-cli?style=flat-square" alt="Contributors">
@@ -59,19 +59,19 @@
 
 ## 📝 About
 
-**My-Agent CLI** is an interactive Text-based User Interface (TUI) app for working with local Large Language Models. Designed for software engineers, it empowers LLM agents with tool-use capabilities to automate and accelerate real development workflows in your terminal.
+**My-Agent CLI** is an interactive Text-based User Interface (TUI) application that helps developers interact with locally hosted Large Language Models (LLMs) and automate developer workflows safely. It provides a guided environment where LLM agents can propose actions (like shell commands) and request user confirmation before executing them.
 
 ---
 
 ## ✨ Features
 
-- ⚡ **Interactive TUI** — Fast, responsive terminal UI built with [Textual](https://textual.textualize.io/).
-- 🤖 **Local LLM Integration** — Connects to local LLM servers (e.g., LM Studio, Ollama).
-- 🛠️ **Smart Tool Use** — Agents suggest & execute shell commands with user confirmation.
-- 🗂️ **Agent Profiles** — Easily define and switch between custom agents in `agents.yaml`.
-- 🧠 **Contextual Conversations** — Maintains chat history and command context.
-- 🔌 **Extensible** — Add your own tools, agents, and UI components.
-- 📝 **Conversation Logging** — Tracks agent actions and responses.
+- ⚡ Interactive TUI — Fast, responsive terminal UI built with Textual.
+- 🤖 Local LLM Integration — Connects to local LLM servers (e.g., LM Studio, Ollama).
+- 🛠️ Smart Tool Use — Agents propose shell commands and wait for user approval before execution.
+- 🗂️ Agent Profiles — Define agents and switch between them using agents.yaml.
+- 🧠 Contextual Conversations — Maintains chat history and command context for better continuity.
+- 🔌 Extensible — Add tools, agents, and UI components easily.
+- 📝 Conversation & Audit Logging — Tracks actions, responses, and executed commands.
 
 ---
 
@@ -96,41 +96,38 @@ pip install -r requirements.txt
 
 ## ⚙️ Configuration
 
-`agents.yaml` defines your agents and their associated models.
+Create or edit agents.yaml to define your agents and the model identifiers your local LLM server exposes.
 
 ```yaml
 agents:
   - name: shell_master
-    model: liquid/lfm2-1.2b # Use the model name loaded in your LLM server
+    model: liquid/lfm2-1.2b # Match the model identifier in your LLM server
     system_prompt: |
-      You are a shell command master. Your goal is to accomplish the user's task by executing shell commands.
-      ...
+      You are a shell command master. Your goal is to accomplish the user's task by proposing shell commands and explaining them. Always ask for confirmation before executing commands.
 ```
-> **Note:** The model name must _exactly_ match the identifier in your LLM server.
+> Note: The model name must exactly match the identifier used by your LLM server.
 
 ---
 
 ## 🖥️ Usage
 
-> ⚠️ **Before starting:** Make sure your LM Studio or Ollama server is running with a model loaded.
+Start the app after ensuring your LLM server is running with a model loaded:
 
-To launch the app:
 ```bash
 python agent_tui.py
 ```
-- **Type your prompts** in the input box and hit Enter.
-- **Tool Confirmation:** The app shows proposed shell commands for your approval before running.
-- **Exit:** Press <kbd>Ctrl+P</kbd>.
+
+- Type prompts in the input box and press Enter.
+- The agent will propose actions (e.g., shell commands) and show a confirmation prompt before executing anything.
+- Exit with Ctrl+P.
 
 ---
 
 ## 🧩 Extending the Agent
 
-- **Add New Agents:** Simply edit `agents.yaml` with your agent details.
-- **Add New Tools:**  
-  1. Implement the tool’s function in `agent_tui.py`.  
-  2. Update `parse_tool_call` to recognize your tool’s JSON format.  
-  3. Instruct your agent via its `system_prompt` on how to use the new tool.
+- Add agents by editing agents.yaml.
+- Add tools by implementing functions (see tools section in the code) and updating parse_tool_call to recognize your tool's JSON.
+- Write clear system prompts to teach agents how and when to use tools.
 
 ---
 
@@ -138,45 +135,38 @@ python agent_tui.py
 
 - [ ] Agent Selection UI
 - [ ] Dynamic Configuration
-- [ ] More Tools (e.g., `write_file`, `git_commit`)
-- [ ] User Confirmation Dialogs
-- [ ] Improved error handling
+- [ ] More Tools (e.g., write_file, git_commit)
+- [ ] User Confirmation Dialogs with improved UX
+- [ ] Better error handling and retries
 
-See [open issues](https://github.com/rhodge-hash/my-agent-cli/issues) for more.
+See open issues for more details: https://github.com/rhodge-hash/my-agent-cli/issues
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome!  
-If you have ideas or improvements, feel free to:
+Contributions are welcome. Please open issues or pull requests. A suggested workflow:
+
 - Fork the repo
-- Create a feature branch (`git checkout -b feature/AmazingFeature`)
-- Commit your changes
-- Push and open a Pull Request
+- Create a feature branch (git checkout -b feature/AmazingFeature)
+- Commit changes and open a pull request
 
-Or open an [issue](https://github.com/rhodge-hash/my-agent-cli/issues) with your suggestion.
-
-#### Top Contributors
-
-[![Contributors](https://contrib.rocks/image?repo=rhodge-hash/my-agent-cli)](https://github.com/rhodge-hash/my-agent-cli/graphs/contributors)
+Include tests or manual steps to verify behavior when possible.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [Unlicense](LICENSE).
+This project is licensed under the Unlicense. See the LICENSE file for details.
 
 ---
 
 ## 📬 Contact
 
-**Roy Hodge Jr.**  
-GitHub: [@rhodge-hash](https://github.com/rhodge-hash)  
-Email: your_email@email.com
+**Roy Hodge Jr.**
+GitHub: @rhodge-hash (https://github.com/rhodge-hash)
+Email: roy@example.com
 
-Project Link: [https://github.com/rhodge-hash/my-agent-cli](https://github.com/rhodge-hash/my-agent-cli)
-
----
+Project: https://github.com/rhodge-hash/my-agent-cli
 
 <p align="center"><a href="#top">⬆️ Back to top</a></p>
