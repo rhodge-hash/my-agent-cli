@@ -153,6 +153,10 @@ Contributions are welcome. Please open issues or pull requests. A suggested work
 
 Include tests or manual steps to verify behavior when possible.
 
+### Top Contributors
+
+[![Contributors](https://contrib.rocks/image?repo=rhodge-hash/my-agent-cli)](https://github.com/rhodge-hash/my-agent-cli/graphs/contributors)
+
 ---
 
 ## 📄 License
